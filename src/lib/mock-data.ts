@@ -1,0 +1,103 @@
+import type { Patient } from "@/types/patient";
+
+export const mockPatients: Patient[] = [
+  {
+    id: "1",
+    name: "Sarah Johnson",
+    age: 45,
+    gender: "Female",
+    patientId: "PT-001",
+    notes: "Regular skin check-up. Family history of melanoma.",
+    visitDate: "2026-03-10",
+    scans: [
+      {
+        id: "s1",
+        imageUrl: "",
+        prediction: {
+          filename: "scan_001.jpg",
+          prediction: "Benign",
+          benign_probability: 0.89,
+          malignant_probability: 0.11,
+          threshold: 0.5,
+          note: "For academic demonstration only.",
+        },
+        date: "2026-03-10",
+        doctorNotes: "Mole appears stable. Schedule follow-up in 6 months.",
+      },
+    ],
+  },
+  {
+    id: "2",
+    name: "Michael Chen",
+    age: 62,
+    gender: "Male",
+    patientId: "PT-002",
+    notes: "New lesion on left arm. Requires biopsy.",
+    visitDate: "2026-03-11",
+    scans: [
+      {
+        id: "s2",
+        imageUrl: "",
+        prediction: {
+          filename: "scan_002.jpg",
+          prediction: "Malignant",
+          benign_probability: 0.18,
+          malignant_probability: 0.82,
+          threshold: 0.5,
+          note: "For academic demonstration only.",
+        },
+        date: "2026-03-11",
+        doctorNotes: "High probability. Biopsy scheduled.",
+      },
+    ],
+  },
+  {
+    id: "3",
+    name: "Emily Rodriguez",
+    age: 34,
+    gender: "Female",
+    patientId: "PT-003",
+    notes: "Annual skin screening.",
+    visitDate: "2026-03-12",
+    scans: [],
+  },
+  {
+    id: "4",
+    name: "James Walker",
+    age: 71,
+    gender: "Male",
+    patientId: "PT-004",
+    notes: "Multiple suspicious moles on back.",
+    visitDate: "2026-03-08",
+    scans: [
+      {
+        id: "s3",
+        imageUrl: "",
+        prediction: {
+          filename: "scan_003.jpg",
+          prediction: "Malignant",
+          benign_probability: 0.23,
+          malignant_probability: 0.77,
+          threshold: 0.5,
+          note: "For academic demonstration only.",
+        },
+        date: "2026-03-08",
+        doctorNotes: "Urgent referral to oncology.",
+      },
+      {
+        id: "s4",
+        imageUrl: "",
+        prediction: {
+          filename: "scan_004.jpg",
+          prediction: "Benign",
+          benign_probability: 0.92,
+          malignant_probability: 0.08,
+          threshold: 0.5,
+          note: "For academic demonstration only.",
+        },
+        date: "2026-03-08",
+        doctorNotes: "No concern. Monitor.",
+      },
+    ],
+  },
+];
